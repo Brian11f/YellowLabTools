@@ -1,11 +1,11 @@
 {
-    "serverPort": 8383,
+    "serverPort": 8000,
     "phantomasEngine": "webkit",
     "googleAnalyticsId": "",
     "screenshotWidth": 400,
     "baseUrl": "/",
     "authorizedKeys": {
-        
+
     },
     "maxAnonymousRunsPerDay": 99999999,
     "maxAnonymousCallsPerDay": 99999999,

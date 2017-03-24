@@ -2,11 +2,11 @@ var should = require('chai').should();
 var phantomasWrapper = require('../../lib/tools/phantomas/phantomasWrapper');
 
 describe('phantomasWrapper', function() {
-    
+
     it('should have a method execute', function() {
         phantomasWrapper.should.have.property('execute').that.is.a('function');
     });
-    
+
     it('should execute', function(done) {
         var url = 'http://localhost:8388/simple-page.html';
 
@@ -37,7 +37,7 @@ describe('phantomasWrapper', function() {
     it('should fail with error 254', function(done) {
         var url = 'http://localhost:8389/not-existing.html';
 
-        this.timeout(15000);
+        this.timeout(30000);
 
         phantomasWrapper.execute({
             params: {
@@ -76,7 +76,7 @@ describe('phantomasWrapper', function() {
         }).then(function(data) {
             /*jshint -W030 */
 
-            try {            
+            try {
                 data.should.be.an('object');
                 data.should.have.a.property('generator');
                 data.generator.should.contain('phantomas');
